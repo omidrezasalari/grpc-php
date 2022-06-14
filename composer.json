@@ -1,0 +1,19 @@
+{
+  "name": "php-grpc",
+  "description": "package for grpc connection on php",
+  "type": "project",
+  "require": {
+    "php": "7.*",
+    "grpc/grpc": "*",
+    "google/protobuf": "*",
+    "ext-grpc": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Product\\": "./client/Product",
+      "GPBMetadata\\": "./client/GPBMetadata"
+    }
+  },
+  "license": "MIT",
+  "minimum-stability": "dev"
+}

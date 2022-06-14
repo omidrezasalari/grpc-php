@@ -1,0 +1,25 @@
+syntax = "proto3";
+package product;
+
+service ProductService {
+  rpc listProducts(Vacant) returns (ProductList) {}
+  rpc readProduct(ProductId) returns (Product) {}
+}
+
+// message type definitions
+
+message Vacant {}
+
+message ProductList {
+  repeated Product products = 1;
+}
+
+message ProductId {
+  int32 id = 1;
+}
+
+message Product {
+  int32 id = 1;
+  string name = 2;
+  string price = 3;
+}
